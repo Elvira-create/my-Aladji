@@ -21,6 +21,7 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
 }
 
 function App() {
+  console.log('Env Vars:', import.meta);
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>

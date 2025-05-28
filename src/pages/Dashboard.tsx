@@ -12,6 +12,7 @@ import { TerritoryStatus } from '../components/TerritoryStatus';
 import { AccountOverview } from '../components/AccountOverview';
 import { TransactionList } from '../components/TransactionList';
 import { SystemStats } from '../components/SystemStats';
+import {Territory} from '../types/database'
 
 // Role-specific dashboard components
 const AdminDashboard = () => (
@@ -104,7 +105,7 @@ const ClerkDashboard = () => {
         <div className="bg-white rounded-lg shadow">
           <div className="px-4 py-5 sm:p-6">
             <h3 className="text-lg font-medium text-gray-900 mb-4">Territory Status</h3>
-            {territories.map(territory => (
+            {territories.map((territory:Territory) => (
               <TerritoryStatus key={territory.id} territoryId={territory.id} />
             ))}
           </div>

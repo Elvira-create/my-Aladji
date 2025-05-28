@@ -28,7 +28,7 @@ export function TerritoryAssignments({ territoryId, onClose }: TerritoryAssignme
     <div className="space-y-4">
       <div className="flow-root">
         <ul role="list" className="-my-5 divide-y divide-gray-200">
-          {assignments.map((assignment) => (
+          {assignments.map((assignment:any) => (
             <li key={assignment.id} className="py-4">
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0">

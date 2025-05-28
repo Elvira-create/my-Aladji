@@ -7,7 +7,7 @@ export function usePermissions() {
   const hasPermission = (permission: Permission) => {
     if (!userProfile?.role_id) return false;
     
-    const rolePermissions = ROLE_PERMISSIONS[userProfile.role_id as UserRole];
+    const rolePermissions:any = ROLE_PERMISSIONS[userProfile.role_id as UserRole];
     return rolePermissions?.includes(permission) ?? false;
   };
 
